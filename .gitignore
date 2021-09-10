@@ -1,0 +1,4 @@
+bns/
+persistent-data/
+.DS_Store
+.env
