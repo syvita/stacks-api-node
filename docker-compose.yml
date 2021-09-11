@@ -27,6 +27,8 @@ services:
       - backend
     depends_on:
       - stacks-blockchain-api
+    environment:
+      STACKS_LOG_DEBUG: 1
   stacks-explorer:
     image: "ghcr.io/syvita/explorer"
     restart: always
