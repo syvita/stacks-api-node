@@ -30,7 +30,7 @@ services:
     environment:
       STACKS_LOG_DEBUG: 1
   stacks-explorer:
-    image: "ghcr.io/syvita/explorer"
+    image: "ghcr.io/syvita/explorer:latest"
     restart: always
     environment:
       NEXT_PUBLIC_MAINNET_API_SERVER: 0.0.0.0:3999
