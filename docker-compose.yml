@@ -25,6 +25,19 @@ services:
       - ./persistent-data/stacks-blockchain:/root/stacks-node/data
     networks:
       - backend
+    depends_on:
+      - stacks-blockchain-api
+  stacks-explorer:
+    image: "blockstack/explorer"
+    restart: on-failure
+    environment:
+      MAINNET_API_SERVER: 0.0.0.0:3999
+    ports:
+      - "3099:3000"
+    networks:
+      - backend
+    depends_on:
+      - stacks-blockchain-api
   stacks-blockchain-api:
     image: "blockstack/stacks-blockchain-api"
     restart: on-failure
