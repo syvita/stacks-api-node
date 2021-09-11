@@ -33,4 +33,6 @@ Creating stacksnode_postgres_1          ... done
 Creating stacksnode_stacks-blockchain-api_1 ... done
 ```
 
-The `stacks-blockchain` take a while to sync up to the blockchain. Once sync is completed the API should be accessible at `http://localhost:3700`
+The `stacks-blockchain` takes over a day to sync up to the blockchain. 
+Once sync is completed the API should be accessible at `http://localhost:3999`
+Once sync is completed the Stacks Explorer should be accessible at `http://localhost:3099`
