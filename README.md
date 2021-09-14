@@ -1,6 +1,6 @@
 ## Stacks API Node easy start
 
-To start a stacks API node you need to first install Docker Desktop.
+To start a stacks API node you need to first install [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
 Once Docker Desktop is up and running ensure your environment is set up correctly by running the command
 ```
