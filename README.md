@@ -19,7 +19,7 @@ Run this command to create a volume where the PostgreSQL database will be persis
 $ docker volume create postgres
 ```
 
-Then run this command to bring up the `postgres` database, the `stacks-blockchain` and the `stacks-blockchain-api` containers.
+Then run this command to bring up the `postgres` database, the `stacks-blockchain`, the `stacks-explorer` and the `stacks-blockchain-api` containers.
 ```
 $ docker-compose up -d
 ```
@@ -31,8 +31,9 @@ Creating network "stacks-api-node_backend" with the default driver
 Creating stacksnode_stacks-blockchain_1     ... done
 Creating stacksnode_postgres_1          ... done
 Creating stacksnode_stacks-blockchain-api_1 ... done
+Creating stacksnode_stacks-explorer_1 ... done
 ```
 
-The `stacks-blockchain` takes over a day to sync up to the blockchain. 
+The `stacks-blockchain` takes ~3 days to sync up to the blockchain.
 Once sync is completed the API should be accessible at `http://localhost:3999`
-Once sync is completed the Stacks Explorer should be accessible at `http://localhost:3099`
+While sync is still in progress, after about 12 hours you should be able to see the blocks start to roll into in the explorer. Stacks Explorer should be accessible at `http://localhost:3099`
