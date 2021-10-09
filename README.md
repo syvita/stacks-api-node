@@ -1,5 +1,7 @@
 ## Stacks API Node easy start
 
+Download this repo as a ZIP file and unzip it and use `cd <directory` in the Terminal to enter the folder.
+
 To start a stacks API node you need to first install [Docker Desktop](https://www.docker.com/products/docker-desktop).
 
 Once Docker Desktop is up and running ensure your environment is set up correctly by running the command
