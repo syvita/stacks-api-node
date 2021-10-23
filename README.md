@@ -4,7 +4,7 @@
 
 ### Requirements
 
-**IMPORTANT:** You need **ALL** of these to use this guide.
+**IMPORTANT:** You need **ALL** of these to use this guide. This guide has only been tested to work on macOS!
 
 - [Docker](https://www.docker.com/products/docker-desktop)
 - [Git](https://git-scm.com)
