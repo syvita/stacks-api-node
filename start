@@ -21,6 +21,10 @@ docker build . -t stacks-api:$API_TAG
 echo "✅  Built Stacks API successfully"
 cd ..
 
+echo "\nℹ️  Creating Postgres volume..."
+docker volume create --name=postgres
+echo "✅  Created Postgres volume"
+
 echo "\nℹ️  Attempting bootup sequence"
 docker-compose up -d
 echo "✅  System bootup complete. Congrats!"
