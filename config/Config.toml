@@ -24,6 +24,7 @@ mode = "mainnet"
 # https://docs.syvita.org/understand-stacks/running-mainnet-node#step-2-running-bitcoin-core
 
 # this is halo's bitcoin core node
+# change to "localhost" if Bitcoin Core is running on the same system
 peer_host = "94.237.60.208"
 username = ""
 password = ""

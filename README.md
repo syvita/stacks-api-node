@@ -1,43 +1,36 @@
-## Stacks API Node easy start
+# Stacks API Node easy start
 
-Download this repo as a ZIP file and unzip it and use `cd <directory` in the Terminal to enter the folder.
+## Quickstart
 
-To start a stacks API node you need to first install [Docker Desktop](https://www.docker.com/products/docker-desktop).
+**IMPORTANT:** You need to install Docker before running the next command. Install it from [here](https://www.docker.com/products/docker-desktop).
 
-Once Docker Desktop is up and running ensure your environment is set up correctly by running the command
-```
-$ docker ps
-```
+Open a terminal of some sort:
 
-At the beginning this should return the following or something like this
-```
-CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
-```
+- macOS - Terminal
+- Windows 10 - Console
+- Windows 11 - Windows Terminal
+- Linux - if you are using Linux, you should know how to use a terminal... lol
 
-Once docker is installed and working clone this repository.
+This command:
 
-Run this command to create a volume where the PostgreSQL database will be persisted.
-```
-docker volume create postgres
-```
+1. Downloads this code
+2. Enters the folder
+3. Starts the quickstart sequence
 
-Then run this command to bring up the `postgres` database, the `stacks-blockchain`, the `stacks-explorer` and the `stacks-blockchain-api` containers.
-
-```
-docker-compose up -d
+```sh
+git clone https://github.com/syvita/stacks-api-node
+cd stacks-api-node
+sh start
 ```
 
-This should return a result that looks like this:
+The quickstart sequence:
 
-```
-Creating network "stacks-api-node_backend" with the default driver
-Creating stacksnode_stacks-blockchain_1     ... done
-Creating stacksnode_postgres_1          ... done
-Creating stacksnode_stacks-blockchain-api_1 ... done
-Creating stacksnode_stacks-explorer_1 ... done
-```
+1. Downloads the Stacks node code
+2. Downloads the Stacks API code
+3. Builds the Stacks node to run on your system (can take upwards of 10min)
+4. Builds the Stacks API to run on your system (usually around 5min)
+5. Boots up the database, node, API and explorer 
 
-The `stacks-blockchain` takes ~3 days to sync up to the blockchain.
-Once sync is completed the API should be accessible at `http://localhost:3999`. Switch over your wallets to use this in their settings.
+It can take anywhere from a few hours to weeks to sync up to the blockchain based on how fast your internet connection is. The API might take a while to be available.
 
-While sync is still in progress, after about 12 hours you should be able to see the blocks start to roll into in the explorer. Stacks Explorer should be accessible at `http://localhost:3099`
+More details are shown in your console after the bootup sequence.

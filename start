@@ -1,0 +1,42 @@
+NODE_TAG="2.0.11.3.0"
+NODE_SRC="https://github.com/syvita/stacks"
+API_TAG="v0.70.1"
+API_SRC="https://github.com/syvita/stacks-blockchain-api"
+
+echo "ℹ️  Cloning Stacks node..."
+git clone https://github.com/syvita/stacks
+git clone --depth 1 --branch $NODE_TAG $NODE_SRC
+echo "\nℹ️  Cloning Stacks API..."
+git clone --depth 1 --branch $API_TAG $API_SRC
+
+echo "\nℹ️  Building Stacks node..."
+cd stacks
+docker build . -t stacks-blockchain:$NODE_TAG
+echo "✅  Built Stacks node successfully"
+cd ..
+
+echo "\nℹ️  Building Stacks API..."
+cd stacks-blockchain-api
+docker build . -t stacks-api:$API_TAG
+echo "✅  Built Stacks API successfully"
+cd ..
+
+echo "\nℹ️  Attempting bootup sequence"
+docker-compose up -d
+echo "✅  System bootup complete. Congrats!"
+
+echo "\nYou now have a:
+- Stacks node running on ports 20443 & 20444
+- API available at http://localhost:3999 (with 3700 for the Stacks node to send events to)
+- Postgres database (used for the API) on port 5432
+- Syvirean Explorer available at http://localhost:3099
+
+Make sure to wait a while for the node to fully sync.
+
+ℹ️  This could take a few hours to a week or so depending on how fast your connection is.
+
+After you're fully synced up, you'll be able to switch your wallets over to use your local API.
+
+You won't need to use Syvita's or Hiro's explorer either - just use yours running on http://localhost:3099
+
+Congrats again! Welcome to the Revolution! ⚒️  🔥"
