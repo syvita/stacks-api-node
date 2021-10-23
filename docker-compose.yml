@@ -1,6 +1,6 @@
-version: "3.7"
 services:
   postgres:
+    restart: always
     image: "postgres:alpine"
     ports:
       - "5432:5432"
