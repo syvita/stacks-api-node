@@ -31,6 +31,8 @@ cd stacks-api-node
 sh start
 ```
 
+**NOTE:** You might have to use `sudo sh start` instead of `sh start` if you encounter permission issues with Docker on Linux.
+
 The quickstart sequence:
 
 1. Downloads the Stacks node code
