@@ -34,7 +34,7 @@ services:
     image: "ghcr.io/syvita/explorer:latest"
     restart: always
     environment:
-      NEXT_PUBLIC_MAINNET_API_SERVER: 0.0.0.0:3999
+      NEXT_PUBLIC_MAINNET_API_SERVER: http://0.0.0.0:3999
     ports:
       - "3099:3000"
     networks:
